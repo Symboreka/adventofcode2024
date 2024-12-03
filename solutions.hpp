@@ -4,6 +4,6 @@
 
 #ifndef ADVENTOFCODE2024_SOLUTIONS_HPP
 #define ADVENTOFCODE2024_SOLUTIONS_HPP
-int day1();
-int day2();
+void day1();
+void day2();
 #endif //ADVENTOFCODE2024_SOLUTIONS_HPP

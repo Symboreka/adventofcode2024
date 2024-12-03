@@ -6,7 +6,7 @@ int day1_first();
 
 int day1_second();
 
-int day1() {
+void day1() {
     day1_first();
     day1_second();
 }
@@ -59,14 +59,14 @@ int day1_second() {
     }
 
     size_t similarity_score = 0;
-    for (int i = 0; i < first_list.size(); ++i) {
+    for (int i : first_list) {
         int occurances = 0;
         for (const auto &item: second_list){
-            if(first_list[i] == item){
+            if(i == item){
                 occurances++;
             }
         }
-        similarity_score += first_list[i] * occurances;
+        similarity_score += i * occurances;
     }
     std::cout << "Similarity score is: " << similarity_score << std::endl;
     return 0;

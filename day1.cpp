@@ -12,7 +12,7 @@ void day1() {
 }
 
 int day1_first() {
-    std::ifstream infile("/Users/rico/CLionProjects/AdventOfCode2024/inputs/day1_first.txt");
+    std::ifstream infile("inputs/day1_first.txt");
     std::string line;
     std::string delimiter = "   ";
     size_t pos = 0;

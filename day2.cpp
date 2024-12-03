@@ -31,7 +31,7 @@ bool check_numbers_descending(std::vector<int> &pVector) {
 }
 
 int day2_first() {
-    std::ifstream infile("/Users/rico/CLionProjects/AdventOfCode2024/inputs/day2_first.txt");
+    std::ifstream infile("inputs/day2_first.txt");
     std::string line;
     size_t result = 0;
 

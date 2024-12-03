@@ -40,5 +40,34 @@ int day1_first() {
 }
 
 int day1_second() {
+    std::ifstream infile("/Users/rico/CLionProjects/AdventOfCode2024/inputs/day1_second.txt");
+    std::string line;
+    std::string delimiter = "   ";
+
+    std::vector<int> first_list;
+    std::vector<int> second_list;
+
+    size_t pos = 0;
+
+    while (std::getline(infile, line)) {
+        std::string first_number_str = line.substr(0, pos = line.find(delimiter));
+        first_list.emplace_back(std::stoi(first_number_str));
+
+        std::string second_number_str = line.erase(0, pos + delimiter.length());
+        second_list.emplace_back(std::stoi(second_number_str));
+
+    }
+
+    size_t similarity_score = 0;
+    for (int i = 0; i < first_list.size(); ++i) {
+        int occurances = 0;
+        for (const auto &item: second_list){
+            if(first_list[i] == item){
+                occurances++;
+            }
+        }
+        similarity_score += first_list[i] * occurances;
+    }
+    std::cout << "Similarity score is: " << similarity_score << std::endl;
     return 0;
 }

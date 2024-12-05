@@ -47,7 +47,7 @@ int day2_first() {
         if(check_numbers_ascending(numbers_in_line) || check_numbers_descending(numbers_in_line)){
             safe = true;
             for (int i = 0; i < numbers_in_line.size() - 1; ++i) {
-                if(std::abs(numbers_in_line[i] - numbers_in_line[i+1]) > 2){
+                if(std::abs(numbers_in_line[i] - numbers_in_line[i+1]) > 3){
                     safe = false;
                     break;
                 }
